@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fff1f2; /* soft pink */
+  background: #fff1f2; /* soft pink background */
   color: #333;
   scroll-behavior: smooth;
   margin: 0;
@@ -16,6 +16,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  padding: 1rem 0;
 }
 .logo {
   color: #db2777; /* pink */
@@ -142,33 +143,44 @@ body {
   transition: all 0.35s ease;
   box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
   border: 1px solid #fbcfe8;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+
+  min-height: 280px; /* equal height for neat grid */
 }
+
 .project-card:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 30px rgba(219, 39, 119, 0.25);
 }
+
 .project-title {
   font-size: 1.375rem;
   font-weight: 700;
   color: #6b21a8;
   margin-bottom: 0.75rem;
 }
+
 .project-desc {
   color: #555;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  margin-bottom: 1.25rem;
+  flex-grow: 1; /* fills space pushing link down */
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.5;
 }
+
 .project-link {
   color: #0ea5e9;
   font-weight: 600;
   transition: 0.3s ease;
   text-decoration: none;
-  align-self: flex-start;
+  align-self: flex-start; /* left align */
+  font-size: 1.1rem;
 }
+
 .project-link:hover {
   color: #db2777;
   text-decoration: underline;
