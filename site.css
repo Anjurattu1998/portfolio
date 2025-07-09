@@ -2,24 +2,33 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fff1f2;
+  background: #fff1f2; /* soft pink */
   color: #333;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==== Header ==== */
 .header {
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .logo {
-  color: #db2777;
+  color: #db2777; /* pink */
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 .nav-link {
   position: relative;
   font-weight: 500;
   color: #555;
+  margin-left: 1.5rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .nav-link::after {
   content: '';
@@ -28,8 +37,9 @@ body {
   background: #db2777;
   position: absolute;
   left: 0;
-  bottom: -4px;
-  transition: 0.3s;
+  bottom: -6px;
+  transition: 0.3s ease;
+  border-radius: 2px;
 }
 .nav-link:hover::after {
   width: 100%;
@@ -41,26 +51,36 @@ body {
 /* ==== Hero Section ==== */
 .hero {
   background: radial-gradient(circle at top left, #fdf2f8, #e0f2fe);
+  padding: 6rem 1rem 4rem;
+  text-align: center;
 }
 .hero h2 {
-  font-size: 3rem;
-  color: #6b21a8;
-  text-shadow: 0 0 6px #fbcfe8;
+  font-size: 3.5rem;
+  color: #6b21a8; /* purple */
+  text-shadow: 0 0 8px #fbcfe8;
+  margin-bottom: 0.5rem;
 }
 .hero p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: #444;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
 }
 
 /* ==== Buttons ==== */
 .btn-primary {
   background: linear-gradient(to right, #db2777, #0ea5e9);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 2rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 1rem;
   box-shadow: 0 4px 14px rgba(219, 39, 119, 0.25);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 .btn-primary:hover {
   transform: scale(1.05);
@@ -69,10 +89,15 @@ body {
 .btn-secondary {
   border: 2px solid #db2777;
   color: #db2777;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 2rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 .btn-secondary:hover {
   background: #fdf2f8;
@@ -80,57 +105,69 @@ body {
 
 /* ==== Section Titles ==== */
 .section-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
   color: #6b21a8;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
 }
 .section-title::after {
   content: '';
-  width: 80px;
+  width: 100px;
   height: 4px;
   background: linear-gradient(to right, #db2777, #0ea5e9);
   display: block;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
+  margin: 0.75rem auto 0;
+  border-radius: 3px;
 }
 
 /* ==== Section Text ==== */
 .section-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.125rem;
+  line-height: 1.8;
   color: #555;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ==== Project Cards ==== */
 .project-card {
   background: linear-gradient(135deg, #fdf2f8, #e0f2fe);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
   border: 1px solid #fbcfe8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 25px rgba(219, 39, 119, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.25);
 }
 .project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: #6b21a8;
+  margin-bottom: 0.75rem;
 }
 .project-desc {
   color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 .project-link {
   color: #0ea5e9;
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+  align-self: flex-start;
 }
 .project-link:hover {
   color: #db2777;
@@ -139,26 +176,33 @@ body {
 
 /* ==== Lists ==== */
 ul {
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
   list-style-type: disc;
 }
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   color: #444;
+  font-size: 1rem;
 }
 
 /* ==== Contact Section ==== */
 #contact a {
-  font-weight: 500;
+  font-weight: 600;
   color: #0ea5e9;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  text-decoration: none;
 }
 #contact a:hover {
   color: #db2777;
+  text-decoration: underline;
 }
 
 /* ==== Footer ==== */
 footer {
   background-color: #fdf2f8;
   color: #666;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  text-align: center;
+  user-select: none;
 }
