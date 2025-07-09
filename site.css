@@ -148,7 +148,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 280px; /* equal height for neat grid */
+  min-height: 280px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .project-card:hover {
@@ -166,7 +167,7 @@ body {
 .project-desc {
   color: #555;
   margin-bottom: 1.25rem;
-  flex-grow: 1; /* fills space pushing link down */
+  flex-grow: 1;
   overflow-wrap: break-word;
   font-size: 1rem;
   line-height: 1.5;
@@ -177,7 +178,7 @@ body {
   font-weight: 600;
   transition: 0.3s ease;
   text-decoration: none;
-  align-self: flex-start; /* left align */
+  align-self: flex-start;
   font-size: 1.1rem;
 }
 
@@ -186,22 +187,40 @@ body {
   text-decoration: underline;
 }
 
+/* Individual styling for each project card (optional) */
+#project1 {
+  border-color: #db2777;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.15);
+}
+#project2 {
+  border-color: #0ea5e9;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.15);
+}
+#project3 {
+  border-color: #6b21a8;
+  box-shadow: 0 8px 20px rgba(107, 33, 168, 0.15);
+}
+#project4 {
+  border-color: #db2777;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.15);
+}
+
 /* ==== Lists ==== */
 ul {
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
   list-style-type: disc;
 }
 li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   color: #444;
   font-size: 1rem;
 }
 
 /* ==== Contact Section ==== */
 #contact a {
-  font-weight: 600;
+  font-weight: 500;
   color: #0ea5e9;
-  transition: 0.3s ease;
+  transition: 0.3s;
   text-decoration: none;
 }
 #contact a:hover {
@@ -213,8 +232,23 @@ li {
 footer {
   background-color: #fdf2f8;
   color: #666;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   padding: 1rem 0;
-  text-align: center;
-  user-select: none;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.75rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .project-card {
+    min-height: auto;
+  }
+  .nav-link {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
 }
