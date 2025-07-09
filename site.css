@@ -1,162 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* site.css */
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff1f2;
-  color: #333;
+/* Smooth scrolling */
+html {
   scroll-behavior: smooth;
 }
 
-/* ==== Header ==== */
-.header {
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/* Google font fallback */
+body {
+  font-family: 'Poppins', sans-serif;
 }
-.logo {
-  color: #db2777;
+
+/* Stylish scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
+::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  border-radius: 4px;
+}
+
+/* Custom hover effects */
+.project-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navigation hover effect */
 .nav-link {
-  position: relative;
-  font-weight: 500;
-  color: #555;
-  transition: all 0.3s ease;
-}
-.nav-link::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #db2777;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s;
-}
-.nav-link:hover::after {
-  width: 100%;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 .nav-link:hover {
-  color: #db2777;
+  color: #2563eb;
+  border-color: #2563eb;
 }
 
-/* ==== Hero Section ==== */
-.hero {
-  background: radial-gradient(circle at top left, #fdf2f8, #e0f2fe);
-}
-.hero h2 {
-  font-size: 3rem;
-  color: #6b21a8;
-  text-shadow: 0 0 6px #fbcfe8;
-}
-.hero p {
-  font-size: 1.125rem;
-  color: #444;
-}
-
-/* ==== Buttons ==== */
-.btn-primary {
-  background: linear-gradient(to right, #db2777, #0ea5e9);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(219, 39, 119, 0.25);
+/* Button transitions */
+.btn-primary,
+.btn-secondary {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .btn-primary:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #be185d, #0284c7);
-}
-.btn-secondary {
-  border: 2px solid #db2777;
-  color: #db2777;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: 0.3s;
+  background-color: #2563eb;
 }
 .btn-secondary:hover {
-  background: #fdf2f8;
-}
-
-/* ==== Section Titles ==== */
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  color: #6b21a8;
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-.section-title::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(to right, #db2777, #0ea5e9);
-  display: block;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-/* ==== Section Text ==== */
-.section-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 1.25rem;
-}
-
-/* ==== Project Cards ==== */
-.project-card {
-  background: linear-gradient(135deg, #fdf2f8, #e0f2fe);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
-  border: 1px solid #fbcfe8;
-}
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 25px rgba(219, 39, 119, 0.2);
-}
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #6b21a8;
-}
-.project-desc {
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-.project-link {
-  color: #0ea5e9;
-  font-weight: 500;
-  transition: 0.3s;
-}
-.project-link:hover {
-  color: #db2777;
-  text-decoration: underline;
-}
-
-/* ==== Lists ==== */
-ul {
-  padding-left: 1.25rem;
-  list-style-type: disc;
-}
-li {
-  margin-bottom: 0.5rem;
-  color: #444;
-}
-
-/* ==== Contact Section ==== */
-#contact a {
-  font-weight: 500;
-  color: #0ea5e9;
-  transition: 0.3s;
-}
-#contact a:hover {
-  color: #db2777;
-}
-footer {
-  background-color: #fdf2f8;
-  color: #666;
+  background-color: #e0f2fe;
 }
