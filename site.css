@@ -1,48 +1,91 @@
 /* site.css */
 
-/* Smooth scrolling */
+/* Enable smooth scrolling between sections */
 html {
   scroll-behavior: smooth;
 }
 
-/* Google font fallback */
+/* Set the global font */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Stylish scrollbar */
+/* Stylish scrollbar (optional) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #a0aec0;
+  background-color: #a0aec0; /* Tailwind's gray-400 */
   border-radius: 4px;
 }
 
-/* Custom hover effects */
+/* Project card hover effect */
 .project-card:hover {
   transform: translateY(-4px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation hover effect */
+/* Nav link transition & underline effect */
 .nav-link {
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 2px solid transparent;
 }
 .nav-link:hover {
-  color: #2563eb;
+  color: #2563eb; /* Tailwind's blue-600 */
   border-color: #2563eb;
 }
 
-/* Button transitions */
+/* Button animations */
 .btn-primary,
 .btn-secondary {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Primary button hover */
 .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #2563eb; /* Tailwind's blue-600 */
 }
+
+/* Secondary button hover */
 .btn-secondary:hover {
-  background-color: #e0f2fe;
+  background-color: #e0f2fe; /* Tailwind's blue-100 */
+}
+
+/* Section title style (for About, Projects, etc.) */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e3a8a; /* Tailwind's blue-900 */
+  margin-bottom: 1.5rem;
+}
+
+/* Section paragraph style */
+.section-text {
+  color: #4b5563; /* Tailwind's gray-700 */
+  margin-bottom: 1rem;
+}
+
+/* Project title and description */
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af; /* Tailwind's blue-800 */
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  color: #374151; /* Tailwind's gray-700 */
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
