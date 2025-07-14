@@ -12,14 +12,33 @@
   <!-- Navbar -->
   <header class="header shadow sticky top-0 z-50 bg-white">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="logo text-xl font-bold text-blue-700">Anju Anju</h1>
-      <nav class="space-x-6 text-gray-700 font-medium">
+      <h1 class="logo text-xl font-bold text-pink-600">Anju Anju</h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden cursor-pointer" id="menu-toggle">
+        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex-col md:hidden px-6 pb-4 text-gray-700 font-medium bg-white">
+      <a href="#home" class="nav-link block py-2">Home</a>
+      <a href="#about" class="nav-link block py-2">About</a>
+      <a href="#projects" class="nav-link block py-2">Projects</a>
+      <a href="#contact" class="nav-link block py-2">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero -->
@@ -75,26 +94,25 @@
       <div id="project1" class="project-card">
         <h3 class="project-title">Responsive Portfolio</h3>
         <p class="project-desc">A personal portfolio built with Tailwind CSS and HTML to showcase my design and dev skills.</p>
-        <a href="https://anjurattu1998.github.io/responsive-project/" target="_blank" rel="noopener noreferrer" class="project-link">View →</a>
+        <a href="https://anjurattu1998.github.io/responsive-project/" target="_blank" class="project-link">View →</a>
       </div>
 
       <div id="project2" class="project-card">
         <h3 class="project-title">Business Landing Page</h3>
         <p class="project-desc">Designed for a flower business using HTML/CSS with SEO-friendly structure.</p>
-        <a href="https://anjurattu1998.github.io/flower/" target="_blank" rel="noopener noreferrer" class="project-link">View →</a>
+        <a href="https://anjurattu1998.github.io/flower/" target="_blank" class="project-link">View →</a>
       </div>
 
       <div id="project3" class="project-card">
         <h3 class="project-title">eCommerce Site</h3>
-        <p class="project-desc">Developed and designed an eCommerce website featuring a user-friendly interface, product filtering, secure checkout, and mobile responsiveness. Implemented using HTML, CSS, JavaScript, and integrated with payment gateways.</p>
-        <a href="https://anjurattu1998.github.io/e-commerce-site/" target="_blank" rel="noopener noreferrer" class="project-link">View →</a>
+        <p class="project-desc">Developed and designed an eCommerce website featuring a user-friendly interface, product filtering, secure checkout, and mobile responsiveness.</p>
+        <a href="https://anjurattu1998.github.io/e-commerce-site/" target="_blank" class="project-link">View →</a>
       </div>
 
       <div id="project4" class="project-card">
         <h3 class="project-title">Graphic Design Portfolio</h3>
         <p class="project-desc">Print and social media designs created with Adobe tools and Canva.</p>
-        <a href="https://anjurattu1998.github.io/canva/" target="_blank" rel="noopener noreferrer" class="project-link">View →</a>
-
+        <a href="https://anjurattu1998.github.io/canva/" target="_blank" class="project-link">View →</a>
       </div>
 
     </div>
@@ -139,5 +157,13 @@
     <p class="text-sm text-gray-600">© 2025 Anju Anju</p>
   </footer>
 
+  <!-- JS for Mobile Menu -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
