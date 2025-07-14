@@ -2,73 +2,108 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fff1f2; /* soft pink background */
-  color: #333;
   scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
+  background: #fff1f2;
+  color: #333;
 }
 
-/* ==== Header ==== */
-.header {
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  padding: 1rem 0;
-}
-.logo {
-  color: #db2777; /* pink */
-  font-weight: 700;
-  font-size: 1.5rem;
-}
+/* Nav Link Animation */
 .nav-link {
   position: relative;
-  font-weight: 500;
   color: #555;
-  margin-left: 1.5rem;
-  transition: all 0.3s ease;
   text-decoration: none;
-}
-.nav-link::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #db2777;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.3s ease;
-  border-radius: 2px;
-}
-.nav-link:hover::after {
-  width: 100%;
+  transition: all 0.3s ease;
 }
 .nav-link:hover {
   color: #db2777;
 }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #db2777;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
 
-/* ==== Hero Section ==== */
-.hero {
-  background: radial-gradient(circle at top left, #fdf2f8, #e0f2fe);
-  padding: 6rem 1rem 4rem;
+/* Section Title */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
   text-align: center;
+  color: #6b21a8;
+  position: relative;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
 }
-.hero h2 {
-  font-size: 3.5rem;
-  color: #6b21a8; /* purple */
-  text-shadow: 0 0 8px #fbcfe8;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.25rem;
-  color: #444;
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+.section-title::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #db2777, #0ea5e9);
+  display: block;
+  margin: 0.75rem auto 0;
+  border-radius: 3px;
 }
 
-/* ==== Buttons ==== */
+/* Section Text */
+.section-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Project Card */
+.project-card {
+  background: linear-gradient(135deg, #fdf2f8, #e0f2fe);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
+  border: 1px solid #fbcfe8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.25);
+}
+.project-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #6b21a8;
+  margin-bottom: 0.75rem;
+}
+.project-desc {
+  color: #555;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.project-link {
+  color: #0ea5e9;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.project-link:hover {
+  color: #db2777;
+  text-decoration: underline;
+}
+
+/* Buttons */
 .btn-primary {
   background: linear-gradient(to right, #db2777, #0ea5e9);
   color: white;
@@ -102,153 +137,4 @@ body {
 }
 .btn-secondary:hover {
   background: #fdf2f8;
-}
-
-/* ==== Section Titles ==== */
-.section-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  text-align: center;
-  color: #6b21a8;
-  position: relative;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em;
-}
-.section-title::after {
-  content: '';
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(to right, #db2777, #0ea5e9);
-  display: block;
-  margin: 0.75rem auto 0;
-  border-radius: 3px;
-}
-
-/* ==== Section Text ==== */
-.section-text {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 1.5rem;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==== Project Cards ==== */
-.project-card {
-  background: linear-gradient(135deg, #fdf2f8, #e0f2fe);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
-  border: 1px solid #fbcfe8;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-height: 280px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.25);
-}
-
-.project-title {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #6b21a8;
-  margin-bottom: 0.75rem;
-}
-
-.project-desc {
-  color: #555;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-  overflow-wrap: break-word;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.project-link {
-  color: #0ea5e9;
-  font-weight: 600;
-  transition: 0.3s ease;
-  text-decoration: none;
-  align-self: flex-start;
-  font-size: 1.1rem;
-}
-
-.project-link:hover {
-  color: #db2777;
-  text-decoration: underline;
-}
-
-/* Individual styling for each project card (optional) */
-#project1 {
-  border-color: #db2777;
-  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.15);
-}
-#project2 {
-  border-color: #0ea5e9;
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.15);
-}
-#project3 {
-  border-color: #6b21a8;
-  box-shadow: 0 8px 20px rgba(107, 33, 168, 0.15);
-}
-#project4 {
-  border-color: #db2777;
-  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.15);
-}
-
-/* ==== Lists ==== */
-ul {
-  padding-left: 1.25rem;
-  list-style-type: disc;
-}
-li {
-  margin-bottom: 0.5rem;
-  color: #444;
-  font-size: 1rem;
-}
-
-/* ==== Contact Section ==== */
-#contact a {
-  font-weight: 500;
-  color: #0ea5e9;
-  transition: 0.3s;
-  text-decoration: none;
-}
-#contact a:hover {
-  color: #db2777;
-  text-decoration: underline;
-}
-
-/* ==== Footer ==== */
-footer {
-  background-color: #fdf2f8;
-  color: #666;
-  font-size: 0.9rem;
-  padding: 1rem 0;
-}
-
-/* ==== Responsive ==== */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.75rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  .project-card {
-    min-height: auto;
-  }
-  .nav-link {
-    margin-left: 1rem;
-    font-size: 0.95rem;
-  }
 }
